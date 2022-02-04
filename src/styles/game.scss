@@ -1,0 +1,52 @@
+.cesped {
+  width: 100px;
+  height: 70px;
+}
+.yoda {
+  width: 80px;
+  height: 80px;
+}
+.dado {
+  background-image: url("../images/dado_pres.png");
+}
+.images {
+  width: 80px;
+  height: 80px;
+}
+.vasija_galleta_azul {
+  display: inline-block;
+  //position: absolute;
+  background-image: url(../images/vasija.jpg);
+  background-repeat: no-repeat;
+  background-size: 10% 80%;
+  background-position: center;
+  background-color: transparent;
+}
+.vasija_rana_verde {
+  display: inline-block;
+  background-image: url(../images/vasija.jpg);
+  background-repeat: no-repeat;
+  background-size: 10% 80%;
+  background-position: center;
+  background-color: transparent;
+}
+.vasija_huevo_blanco {
+  background-image: url(../images/vasija.jpg);
+  background-repeat: no-repeat;
+  background-size: 30% 100%;
+  background-position: center;
+  //background-color: transparent;
+}
+.armario {
+  display: flex;
+  flex-direction: column;
+
+  background-image: url(../images/armario.png);
+  background-repeat: no-repeat;
+  background-size: 50% 200%;
+  background-position: center;
+  background-color: transparent;
+}
+.hidden {
+  visibility: hidden;
+}
