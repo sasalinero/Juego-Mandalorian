@@ -15,7 +15,7 @@ const Game = () => {
   const [huevo, setHuevo] = useState(3);
   const [galleta, setGalleta] = useState(3);
   const [cesped, setCesped] = useState(6);
-  const [dado, setDado] = useState(["rana", "huevo", "galleta", "grogu"]);
+  const [dado, setDado] = useState(["rana", "huevo", "galleta", "yoda"]);
   const [yoda, setYoda] = useState(0);
 
   const [classRana1, setClassRana1] = useState("");
@@ -30,6 +30,20 @@ const Game = () => {
   const [classGalleta2, setClassGalleta2] = useState("");
   const [classGalleta3, setClassGalleta3] = useState("");
 
+  const [moveYoda1, setmoveYoda1] = useState(
+    <img src={grogu} alt="grogu" />,
+    <img src={cesped_verde} alt="grogu" />,
+    <img src={cesped_verde} alt="grogu" />,
+    <img src={cesped_verde} alt="grogu" />,
+    <img src={cesped_verde} alt="grogu" />,
+    <img src={cesped_verde} alt="grogu" />
+  );
+  const [moveYoda2, setmoveYoda2] = useState("");
+  const [moveYoda3, setmoveYoda3] = useState("");
+  const [moveYoda4, setmoveYoda4] = useState("");
+  const [moveYoda5, setmoveYoda5] = useState("");
+  const [moveYoda6, setmoveYoda6] = useState("");
+
   const removeRana = () => {
     if (rana === 3) {
       setClassRana3("hidden");
@@ -39,6 +53,7 @@ const Game = () => {
       setClassRana1("hidden");
     } else if (rana === 0) {
       setYoda(yoda + 1);
+      //setYoda(yoda);
     }
     setRana(rana - 1);
   };
@@ -68,6 +83,18 @@ const Game = () => {
     setGalleta(galleta - 1);
   };
 
+  const moveGrogu = () => {
+    if (yoda === 0) {
+      setYoda(yoda + 1);
+      setmoveYoda1(moveYoda1);
+      // return (
+      //   <li>
+      //     <img src={grogu} alt="grogu" />
+      //   </li>
+      // );
+    }
+  };
+
   const handleClick = () => {
     let imagen = Math.floor(Math.random() * dado.length);
     let resultadoDado = dado[imagen];
@@ -85,6 +112,9 @@ const Game = () => {
         break;
       case "galleta":
         removeGalleta();
+        break;
+      case "grogu":
+        moveGrogu();
         break;
       default:
         break;
@@ -158,7 +188,11 @@ const Game = () => {
       <section>
         {" "}
         <img className="yoda" src={grogu} alt="babyoda" />
-        <img className="cesped" src={cesped_verde} alt="cesped_verde" />
+        <img
+          className={`cesped ${moveYoda1}`}
+          src={cesped_verde}
+          alt="cesped_verde"
+        />
         <img className="cesped" src={cesped_verde} alt="cesped_verde" />
         <img className="cesped" src={cesped_verde} alt="cesped_verde" />
         <img className="cesped" src={cesped_verde} alt="cesped_verde" />
