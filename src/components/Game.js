@@ -9,8 +9,11 @@ import huevo_blanco from "../images/huevo.jpg";
 import rana_verde from "../images/rana.jpg";
 import vasija from "../images/vasija.jpg";
 import App from "./App";
+import armario from "../images/armario.png";
 
 const Game = () => {
+  /////////////////////////////////////////VARIABLES DE ESTADO/////////////////////////////////////////////////////////////////////////////////
+
   const [rana, setRana] = useState(3);
   const [huevo, setHuevo] = useState(3);
   const [galleta, setGalleta] = useState(3);
@@ -30,20 +33,15 @@ const Game = () => {
   const [classGalleta2, setClassGalleta2] = useState("");
   const [classGalleta3, setClassGalleta3] = useState("");
 
-  const [moveYoda1, setmoveYoda1] = useState(
-    <img src={grogu} alt="grogu" />,
-    <img src={cesped_verde} alt="grogu" />,
-    <img src={cesped_verde} alt="grogu" />,
-    <img src={cesped_verde} alt="grogu" />,
-    <img src={cesped_verde} alt="grogu" />,
-    <img src={cesped_verde} alt="grogu" />
-  );
+  const [moveYoda1, setmoveYoda1] = useState("");
   const [moveYoda2, setmoveYoda2] = useState("");
   const [moveYoda3, setmoveYoda3] = useState("");
   const [moveYoda4, setmoveYoda4] = useState("");
   const [moveYoda5, setmoveYoda5] = useState("");
   const [moveYoda6, setmoveYoda6] = useState("");
 
+  ///////////////////////////////////////////////////////////FUNCIONES DEL SWITCH PARA ELIMINAR COMIDAS DEL ARMARIO//////////////////////////////////////////////////////
+  ////////////////ELIMINAR LAS RANAS///////////////////
   const removeRana = () => {
     if (rana === 3) {
       setClassRana3("hidden");
@@ -53,11 +51,10 @@ const Game = () => {
       setClassRana1("hidden");
     } else if (rana === 0) {
       setYoda(yoda + 1);
-      //setYoda(yoda);
     }
     setRana(rana - 1);
   };
-
+  /////////////////////////ELIMINAR LOS HUEVOS////////////////////
   const removeHuevo = () => {
     if (huevo === 3) {
       setClassHuevo3("hidden");
@@ -70,6 +67,7 @@ const Game = () => {
     }
     setHuevo(huevo - 1);
   };
+  ///////////////////////ELIMINAR LAS GALLETAS/////////////////////
   const removeGalleta = () => {
     if (galleta === 3) {
       setClassGalleta3("hidden");
@@ -84,16 +82,14 @@ const Game = () => {
   };
 
   const moveGrogu = () => {
-    if (yoda === 0) {
-      setYoda(yoda + 1);
-      setmoveYoda1(moveYoda1);
-      // return (
-      //   <li>
-      //     <img src={grogu} alt="grogu" />
-      //   </li>
-      // );
+    if (yoda === 3) {
+      setYoda("hidden");
+      // console.log("Aqui yoda");
+      //setmoveYoda1("hidden");
     }
   };
+
+  ////////////////////////////////////////CUANDO PRESIONO EL DADO/////////////////////////////////////////////////////////
 
   const handleClick = () => {
     let imagen = Math.floor(Math.random() * dado.length);
@@ -121,6 +117,8 @@ const Game = () => {
     }
   };
 
+  /////////////////////////////LO QUE SE PINTA////////////////////////////////////
+
   return (
     <div>
       <Link to="/">
@@ -128,76 +126,111 @@ const Game = () => {
       </Link>{" "}
       <section>
         <button onClick={handleClick} className="dado">
+          {/* <img className="dado" src={dado_juego} alt="dado" /> */}
           DADO
         </button>{" "}
+      </section>{" "}
+      <section className="grid">
+        <section>
+          <img className="yoda yoda1" src={grogu} alt="babyoda" />
+          <img className="yoda yoda2" src={grogu} alt="babyoda" />
+          <img className="yoda yoda3" src={grogu} alt="babyoda" />
+          <img className="yoda yoda4" src={grogu} alt="babyoda" />
+          <img className="yoda yoda5" src={grogu} alt="babyoda" />
+          <img className="yoda yoda6" src={grogu} alt="babyoda" />
+        </section>
+
+        <section>
+          <img
+            className="cesped cesped1"
+            src={cesped_verde}
+            alt="cesped_verde"
+          />
+          <img
+            className="cesped cesped2"
+            src={cesped_verde}
+            alt="cesped_verde"
+          />
+          <img
+            className="cesped cesped3"
+            src={cesped_verde}
+            alt="cesped_verde"
+          />
+          <img
+            className="cesped cesped4"
+            src={cesped_verde}
+            alt="cesped_verde"
+          />
+          <img
+            className="cesped cesped5"
+            src={cesped_verde}
+            alt="cesped_verde"
+          />
+          <img
+            className="cesped cesped6"
+            src={cesped_verde}
+            alt="cesped_verde"
+          />
+        </section>
       </section>
       <section className="armario">
-        <section className="vasija_galleta_azul">
+        <img className="armario" src={armario} alt="armario" />
+        <img src={vasija} className="vasija1" alt="vasija" />
+        <img src={vasija} className="vasija2" alt="vasija" />
+        <img src={vasija} className="vasija3" alt="vasija" />
+
+        <section>
           <img
-            className={`images ${classGalleta1}`}
+            className={`images_galletas ${classGalleta1}`}
             src={galleta_azul}
             alt="galleta_azul"
           />
           <img
-            className={`images ${classGalleta2}`}
+            className={`images_galletas ${classGalleta2}`}
             src={galleta_azul}
             alt="galleta_azul"
           />
           <img
-            className={`images ${classGalleta3}`}
+            className={`images_galletas ${classGalleta3}`}
             src={galleta_azul}
             alt="galleta_azul"
           />
         </section>
 
-        <section className="vasija_huevo_blanco">
+        <section>
           <img
-            className={`images ${classHuevo1}`}
+            className={`images_huevo ${classHuevo1}`}
             src={huevo_blanco}
             alt="huevo_blanco"
           />
           <img
-            className={`images ${classHuevo2}`}
+            className={`images_huevo ${classHuevo2}`}
             src={huevo_blanco}
             alt="huevo_blanco"
           />
           <img
-            className={`images ${classHuevo3}`}
+            className={`images_huevo ${classHuevo3}`}
             src={huevo_blanco}
             alt="huevo_blanco"
           />
         </section>
-        <section className="vasija_rana_verde">
+        <section>
           <img
-            className={`images ${classRana1}`}
+            className={`images_rana ${classRana1}`}
             src={rana_verde}
             alt="rana_verde"
           />
           <img
-            className={`images ${classRana2}`}
+            className={`images_rana ${classRana2}`}
             src={rana_verde}
             alt="rana_verde"
           />
           <img
-            className={`images ${classRana3}`}
+            className={`images_rana ${classRana3}`}
             src={rana_verde}
             alt="rana_verde"
           />
         </section>
-      </section>
-      <section>
-        {" "}
-        <img className="yoda" src={grogu} alt="babyoda" />
-        <img
-          className={`cesped ${moveYoda1}`}
-          src={cesped_verde}
-          alt="cesped_verde"
-        />
-        <img className="cesped" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped" src={cesped_verde} alt="cesped_verde" />
       </section>
     </div>
   );
