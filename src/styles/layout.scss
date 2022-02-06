@@ -1,5 +1,5 @@
-.nav {
-}
+@import "./core/mixins.scss";
+@import "./core/variables.scss";
 
 ul {
   list-style: none;
@@ -11,10 +11,13 @@ ul {
 }
 .button_layout {
   font-size: 100px;
+  @include background_buttons;
 }
 .button_game {
   font-size: 100px;
+  @include background_buttons;
 }
 .button_rules {
   font-size: 100px;
+  @include background_buttons;
 }
