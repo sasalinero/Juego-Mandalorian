@@ -1,4 +1,5 @@
 import "../styles/main.scss";
+
 import { useState } from "react";
 //Incluimos estos componentes para la gestion del router
 import { Route, Routes } from "react-router-dom";
@@ -20,8 +21,6 @@ function App() {
         <Route path="/rules" element={<Rules />} />
         <Route path="/start" element={<Start />} />
       </Routes>
-
-      <p>Hola mundo</p>
     </div>
   );
 }

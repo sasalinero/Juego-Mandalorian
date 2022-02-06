@@ -3,6 +3,7 @@
 
   grid-template-columns: repeat(6, 16px);
   grid-template-rows: 50%, 50%;
+  background-color: pink;
 
   gap: 30px;
 }
@@ -119,9 +120,9 @@
   grid-row: 6/7;
 }
 
-.dado {
-  //background-image: url("../images/dado_pres.png");
-}
+// .dado {
+//   //background-image: url("../images/dado_pres.png");
+// }
 
 .images_galletas {
   width: 60px;

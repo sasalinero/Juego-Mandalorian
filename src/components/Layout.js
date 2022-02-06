@@ -21,19 +21,25 @@ const Layout = () => {
       <nav className="nav">
         <ul>
           <li>
-            {" "}
-            <Link to="/start">
-              <button onClick={handleClick}>JUGAR</button>
+            <Link to="/pieces">
+              <button className="button_layout" onClick={handleClick}>
+                PIECES
+              </button>
             </Link>
           </li>
           <li>
-            <Link to="/pieces">
-              <button onClick={handleClick}>PIECES</button>
+            {" "}
+            <Link to="/start">
+              <button onClick={handleClick} className="button_game">
+                GAME
+              </button>
             </Link>
           </li>
           <li>
             <Link to="/rules">
-              <button onClick={handleClick}>RULES</button>
+              <button onClick={handleClick} className="button_rules">
+                RULES
+              </button>
             </Link>
           </li>
         </ul>

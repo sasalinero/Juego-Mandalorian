@@ -33,12 +33,12 @@ const Game = () => {
   const [classGalleta2, setClassGalleta2] = useState("");
   const [classGalleta3, setClassGalleta3] = useState("");
 
-  const [moveYoda1, setmoveYoda1] = useState("");
-  const [moveYoda2, setmoveYoda2] = useState("");
-  const [moveYoda3, setmoveYoda3] = useState("");
-  const [moveYoda4, setmoveYoda4] = useState("");
-  const [moveYoda5, setmoveYoda5] = useState("");
-  const [moveYoda6, setmoveYoda6] = useState("");
+  const [classMoveYoda1, setClassMoveYoda1] = useState("hidden");
+  const [classMoveYoda2, setClassMoveYoda2] = useState("hidden");
+  const [classMoveYoda3, setClassMoveYoda3] = useState("hidden");
+  const [classMoveYoda4, setClassMoveYoda4] = useState("hidden");
+  const [classMoveYoda5, setClassMoveYoda5] = useState("hidden");
+  const [classMoveYoda6, setClassMoveYoda6] = useState("hidden");
 
   ///////////////////////////////////////////////////////////FUNCIONES DEL SWITCH PARA ELIMINAR COMIDAS DEL ARMARIO//////////////////////////////////////////////////////
   ////////////////ELIMINAR LAS RANAS///////////////////
@@ -50,7 +50,7 @@ const Game = () => {
     } else if (rana === 1) {
       setClassRana1("hidden");
     } else if (rana === 0) {
-      setYoda(yoda + 1);
+      moveGrogu();
     }
     setRana(rana - 1);
   };
@@ -63,7 +63,7 @@ const Game = () => {
     } else if (huevo === 1) {
       setClassHuevo1("hidden");
     } else if (huevo === 0) {
-      setYoda(yoda + 1);
+      moveGrogu();
     }
     setHuevo(huevo - 1);
   };
@@ -76,16 +76,33 @@ const Game = () => {
     } else if (galleta === 1) {
       setClassGalleta1("hidden");
     } else if (galleta === 0) {
-      setYoda(yoda + 1);
+      moveGrogu();
     }
     setGalleta(galleta - 1);
   };
 
+  //////////////////////MOVER A GROGU//////////////////////////////////
+
   const moveGrogu = () => {
-    if (yoda === 3) {
-      setYoda("hidden");
-      // console.log("Aqui yoda");
-      //setmoveYoda1("hidden");
+    setYoda(yoda + 1);
+
+    if (yoda === 0) {
+      setClassMoveYoda1("");
+    } else if (yoda === 1) {
+      setClassMoveYoda2("");
+      setClassMoveYoda1("hidden");
+    } else if (yoda === 2) {
+      setClassMoveYoda3("");
+      setClassMoveYoda2("hidden");
+    } else if (yoda === 3) {
+      setClassMoveYoda4("");
+      setClassMoveYoda3("hidden");
+    } else if (yoda === 4) {
+      setClassMoveYoda5("");
+      setClassMoveYoda4("hidden");
+    } else if (yoda === 5) {
+      setClassMoveYoda6("");
+      setClassMoveYoda5("hidden");
     }
   };
 
@@ -94,9 +111,6 @@ const Game = () => {
   const handleClick = () => {
     let imagen = Math.floor(Math.random() * dado.length);
     let resultadoDado = dado[imagen];
-
-    console.log(imagen);
-    console.log(dado[imagen]);
 
     switch (resultadoDado) {
       case "rana":
@@ -109,7 +123,7 @@ const Game = () => {
       case "galleta":
         removeGalleta();
         break;
-      case "grogu":
+      case "yoda":
         moveGrogu();
         break;
       default:
@@ -126,17 +140,40 @@ const Game = () => {
       </Link>{" "}
       <section>
         <button onClick={handleClick} className="dado">
-          {/* <img className="dado" src={dado_juego} alt="dado" /> */}
           DADO
         </button>{" "}
       </section>{" "}
       <section className="grid">
-        <img className="yoda yoda1" src={grogu} alt="babyoda" />
-        <img className="yoda yoda2" src={grogu} alt="babyoda" />
-        <img className="yoda yoda3" src={grogu} alt="babyoda" />
-        <img className="yoda yoda4" src={grogu} alt="babyoda" />
-        <img className="yoda yoda5" src={grogu} alt="babyoda" />
-        <img className="yoda yoda6" src={grogu} alt="babyoda" />
+        <img
+          className={`yoda yoda1  ${classMoveYoda1}`}
+          src={grogu}
+          alt="babyoda"
+        />
+        <img
+          className={`yoda yoda2  ${classMoveYoda2}`}
+          src={grogu}
+          alt="babyoda"
+        />
+        <img
+          className={`yoda yoda3  ${classMoveYoda3}`}
+          src={grogu}
+          alt="babyoda"
+        />
+        <img
+          className={`yoda yoda4  ${classMoveYoda4}`}
+          src={grogu}
+          alt="babyoda"
+        />
+        <img
+          className={`yoda yoda5  ${classMoveYoda5}`}
+          src={grogu}
+          alt="babyoda"
+        />
+        <img
+          className={`yoda yoda6  ${classMoveYoda6}`}
+          src={grogu}
+          alt="babyoda"
+        />
 
         <img className="cesped cesped1" src={cesped_verde} alt="cesped_verde" />
         <img className="cesped cesped2" src={cesped_verde} alt="cesped_verde" />
