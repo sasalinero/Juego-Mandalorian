@@ -8,7 +8,7 @@ import blue_cookie from "../images/galleta.jpg";
 import white_egg from "../images/huevo.png";
 import green_frog from "../images/rana.png";
 import grogu from "../images/yoda.jpg";
-import dado_juego from "../images/dado.jpg";
+import dice from "../images/dado.jpg";
 import arrow from "../images/flecha.png";
 
 const Pieces = () => {
@@ -59,7 +59,7 @@ const Pieces = () => {
         </li>
         <li>Huevos blancos de rana 🥚🥚🥚 (x3)</li>
         <li>
-          Dado <img className="dado_pieces" src={dado_juego} alt="dado" /> (x1)
+          Dice <img className="dice_pieces" src={dice} alt="dice" /> (x1)
         </li>
         <li>
           Grogu <img className="grogu_pieces" src={grogu} alt="grogu" /> (x1)

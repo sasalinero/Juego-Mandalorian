@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/game.scss";
 import green_grass from "../images/cesped.png";
 import grogu from "../images/yoda.jpg";
-import dado_juego from "../images/dado.jpg";
+import dice from "../images/dado.jpg";
 import blue_cookie from "../images/galleta.jpg";
 import white_egg from "../images/huevo.jpg";
 import green_frog from "../images/rana.png";
@@ -15,58 +15,58 @@ import arrow from "../images/flecha.png";
 const Game = () => {
   /////////////////////////////////////////VARIABLES DE ESTADO/////////////////////////////////////////////////////////////////////////////////
 
-  const [rana, setRana] = useState(3);
-  const [huevo, setHuevo] = useState(3);
+  const [frog, setFrog] = useState(3);
+  const [egg, setEgg] = useState(3);
   const [galleta, setGalleta] = useState(3);
   const [cesped, setCesped] = useState(6);
-  const [dado, setDado] = useState(["rana", "huevo", "galleta", "grogu"]);
-  const [grogu, setYoda] = useState(0);
+  const [dice, setDice] = useState(["frog", "egg", "galleta", "grogu"]);
+  const [grogu, setGrogu] = useState(0);
 
-  const [classRana1, setClassRana1] = useState("");
-  const [classRana2, setClassRana2] = useState("");
-  const [classRana3, setClassRana3] = useState("");
+  const [classFrog1, setClassFrog1] = useState("");
+  const [classFrog2, setClassFrog2] = useState("");
+  const [classFrog3, setClassFrog3] = useState("");
 
-  const [classHuevo1, setClassHuevo1] = useState("");
-  const [classHuevo2, setClassHuevo2] = useState("");
-  const [classHuevo3, setClassHuevo3] = useState("");
+  const [classEgg1, setClassEgg1] = useState("");
+  const [classEgg2, setClassEgg2] = useState("");
+  const [classEgg3, setClassEgg3] = useState("");
 
   const [classGalleta1, setClassGalleta1] = useState("");
   const [classGalleta2, setClassGalleta2] = useState("");
   const [classGalleta3, setClassGalleta3] = useState("");
 
-  const [classMoveYoda1, setClassMoveYoda1] = useState("hidden");
-  const [classMoveYoda2, setClassMoveYoda2] = useState("hidden");
-  const [classMoveYoda3, setClassMoveYoda3] = useState("hidden");
-  const [classMoveYoda4, setClassMoveYoda4] = useState("hidden");
-  const [classMoveYoda5, setClassMoveYoda5] = useState("hidden");
-  const [classMoveYoda6, setClassMoveYoda6] = useState("hidden");
+  const [classMoveGrogu1, setClassMoveGrogu1] = useState("hidden");
+  const [classMoveGrogu2, setClassMoveGrogu2] = useState("hidden");
+  const [classMoveGrogu3, setClassMoveGrogu3] = useState("hidden");
+  const [classMoveGrogu4, setClassMoveGrogu4] = useState("hidden");
+  const [classMoveGrogu5, setClassMoveGrogu5] = useState("hidden");
+  const [classMoveGrogu6, setClassMoveGrogu6] = useState("hidden");
 
   ///////////////////////////////////////////////////////////FUNCIONES DEL SWITCH PARA ELIMINAR COMIDAS DEL ARMARIO//////////////////////////////////////////////////////
   ////////////////ELIMINAR LAS RANAS///////////////////
-  const removeRana = () => {
-    if (rana === 3) {
-      setClassRana3("hidden");
-    } else if (rana === 2) {
-      setClassRana2("hidden");
-    } else if (rana === 1) {
-      setClassRana1("hidden");
-    } else if (rana === 0) {
+  const removeFrog = () => {
+    if (frog === 3) {
+      setClassFrog3("hidden");
+    } else if (frog === 2) {
+      setClassFrog2("hidden");
+    } else if (frog === 1) {
+      setClassFrog1("hidden");
+    } else if (frog === 0) {
       moveGrogu();
     }
-    setRana(rana - 1);
+    setFrog(frog - 1);
   };
   /////////////////////////ELIMINAR LOS HUEVOS////////////////////
-  const removeHuevo = () => {
-    if (huevo === 3) {
-      setClassHuevo3("hidden");
-    } else if (huevo === 2) {
-      setClassHuevo2("hidden");
-    } else if (huevo === 1) {
-      setClassHuevo1("hidden");
-    } else if (huevo === 0) {
+  const removeEgg = () => {
+    if (egg === 3) {
+      setClassEgg3("hidden");
+    } else if (egg === 2) {
+      setClassEgg2("hidden");
+    } else if (egg === 1) {
+      setClassEgg1("hidden");
+    } else if (egg === 0) {
       moveGrogu();
     }
-    setHuevo(huevo - 1);
+    setEgg(egg - 1);
   };
   ///////////////////////ELIMINAR LAS GALLETAS/////////////////////
   const removeGalleta = () => {
@@ -85,41 +85,41 @@ const Game = () => {
   //////////////////////MOVER A GROGU//////////////////////////////////
 
   const moveGrogu = () => {
-    setYoda(grogu + 1);
+    setGrogu(grogu + 1);
 
     if (grogu === 0) {
-      setClassMoveYoda1("");
+      setClassMoveGrogu1("");
     } else if (grogu === 1) {
-      setClassMoveYoda2("");
-      setClassMoveYoda1("hidden");
+      setClassMoveGrogu2("");
+      setClassMoveGrogu1("hidden");
     } else if (grogu === 2) {
-      setClassMoveYoda3("");
-      setClassMoveYoda2("hidden");
+      setClassMoveGrogu3("");
+      setClassMoveGrogu2("hidden");
     } else if (grogu === 3) {
-      setClassMoveYoda4("");
-      setClassMoveYoda3("hidden");
+      setClassMoveGrogu4("");
+      setClassMoveGrogu3("hidden");
     } else if (grogu === 4) {
-      setClassMoveYoda5("");
-      setClassMoveYoda4("hidden");
+      setClassMoveGrogu5("");
+      setClassMoveGrogu4("hidden");
     } else if (grogu === 5) {
-      setClassMoveYoda6("");
-      setClassMoveYoda5("hidden");
+      setClassMoveGrogu6("");
+      setClassMoveGrogu5("hidden");
     }
   };
 
   ////////////////////////////////////////CUANDO PRESIONO EL DADO/////////////////////////////////////////////////////////
 
   const handleClick = () => {
-    let imagen = Math.floor(Math.random() * dado.length);
-    let resultadoDado = dado[imagen];
+    let imagen = Math.floor(Math.random() * dice.length);
+    let resultadoDice = dice[imagen];
 
-    switch (resultadoDado) {
-      case "rana":
-        removeRana();
+    switch (resultadoDice) {
+      case "frog":
+        removeFrog();
 
         break;
-      case "huevo":
-        removeHuevo();
+      case "egg":
+        removeEgg();
         break;
       case "galleta":
         removeGalleta();
@@ -142,9 +142,9 @@ const Game = () => {
         </button>
       </Link>{" "}
       <section>
-        <button onClick={handleClick} className="dado">
+        <button onClick={handleClick} className="dice">
           {" "}
-          <img className="dado_imagen" src={dado_juego} alt="dado" />
+          <img className="dice_imagen" src={dice} alt="dice" />
         </button>{" "}
       </section>{" "}
       <section className="grid">
@@ -167,63 +167,63 @@ const Game = () => {
           alt="blue_cookie"
         />
         <img
-          className={`images_huevo ${classHuevo1}`}
+          className={`images_egg ${classEgg1}`}
           src={white_egg}
           alt="white_egg"
         />
         <img
-          className={`images_huevo ${classHuevo2}`}
+          className={`images_egg ${classEgg2}`}
           src={white_egg}
           alt="white_egg"
         />
         <img
-          className={`images_huevo ${classHuevo3}`}
+          className={`images_egg ${classEgg3}`}
           src={white_egg}
           alt="white_egg"
         />
 
         <img
-          className={`images_rana ${classRana1}`}
+          className={`images_frog ${classFrog1}`}
           src={green_frog}
           alt="green_frog"
         />
         <img
-          className={`images_rana ${classRana2}`}
+          className={`images_frog ${classFrog2}`}
           src={green_frog}
           alt="green_frog"
         />
         <img
-          className={`images_rana ${classRana3}`}
+          className={`images_frog ${classFrog3}`}
           src={green_frog}
           alt="green_frog"
         />
         <img
-          className={`grogu grogu1  ${classMoveYoda1}`}
+          className={`grogu grogu1  ${classMoveGrogu1}`}
           src={grogu}
           alt="babgrogu"
         />
         <img
-          className={`grogu grogu2  ${classMoveYoda2}`}
+          className={`grogu grogu2  ${classMoveGrogu2}`}
           src={grogu}
           alt="babgrogu"
         />
         <img
-          className={`grogu grogu3  ${classMoveYoda3}`}
+          className={`grogu grogu3  ${classMoveGrogu3}`}
           src={grogu}
           alt="babgrogu"
         />
         <img
-          className={`grogu grogu4  ${classMoveYoda4}`}
+          className={`grogu grogu4  ${classMoveGrogu4}`}
           src={grogu}
           alt="babgrogu"
         />
         <img
-          className={`grogu grogu5  ${classMoveYoda5}`}
+          className={`grogu grogu5  ${classMoveGrogu5}`}
           src={grogu}
           alt="babgrogu"
         />
         <img
-          className={`grogu grogu6  ${classMoveYoda6}`}
+          className={`grogu grogu6  ${classMoveGrogu6}`}
           src={grogu}
           alt="babgrogu"
         />
