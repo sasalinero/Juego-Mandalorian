@@ -131,47 +131,19 @@ const Game = () => {
         </button>{" "}
       </section>{" "}
       <section className="grid">
-        <section>
-          <img className="yoda yoda1" src={grogu} alt="babyoda" />
-          <img className="yoda yoda2" src={grogu} alt="babyoda" />
-          <img className="yoda yoda3" src={grogu} alt="babyoda" />
-          <img className="yoda yoda4" src={grogu} alt="babyoda" />
-          <img className="yoda yoda5" src={grogu} alt="babyoda" />
-          <img className="yoda yoda6" src={grogu} alt="babyoda" />
-        </section>
+        <img className="yoda yoda1" src={grogu} alt="babyoda" />
+        <img className="yoda yoda2" src={grogu} alt="babyoda" />
+        <img className="yoda yoda3" src={grogu} alt="babyoda" />
+        <img className="yoda yoda4" src={grogu} alt="babyoda" />
+        <img className="yoda yoda5" src={grogu} alt="babyoda" />
+        <img className="yoda yoda6" src={grogu} alt="babyoda" />
 
-        <section>
-          <img
-            className="cesped cesped1"
-            src={cesped_verde}
-            alt="cesped_verde"
-          />
-          <img
-            className="cesped cesped2"
-            src={cesped_verde}
-            alt="cesped_verde"
-          />
-          <img
-            className="cesped cesped3"
-            src={cesped_verde}
-            alt="cesped_verde"
-          />
-          <img
-            className="cesped cesped4"
-            src={cesped_verde}
-            alt="cesped_verde"
-          />
-          <img
-            className="cesped cesped5"
-            src={cesped_verde}
-            alt="cesped_verde"
-          />
-          <img
-            className="cesped cesped6"
-            src={cesped_verde}
-            alt="cesped_verde"
-          />
-        </section>
+        <img className="cesped cesped1" src={cesped_verde} alt="cesped_verde" />
+        <img className="cesped cesped2" src={cesped_verde} alt="cesped_verde" />
+        <img className="cesped cesped3" src={cesped_verde} alt="cesped_verde" />
+        <img className="cesped cesped4" src={cesped_verde} alt="cesped_verde" />
+        <img className="cesped cesped5" src={cesped_verde} alt="cesped_verde" />
+        <img className="cesped cesped6" src={cesped_verde} alt="cesped_verde" />
       </section>
       <section className="armario">
         <img className="armario" src={armario} alt="armario" />
@@ -179,58 +151,53 @@ const Game = () => {
         <img src={vasija} className="vasija2" alt="vasija" />
         <img src={vasija} className="vasija3" alt="vasija" />
 
-        <section>
-          <img
-            className={`images_galletas ${classGalleta1}`}
-            src={galleta_azul}
-            alt="galleta_azul"
-          />
-          <img
-            className={`images_galletas ${classGalleta2}`}
-            src={galleta_azul}
-            alt="galleta_azul"
-          />
-          <img
-            className={`images_galletas ${classGalleta3}`}
-            src={galleta_azul}
-            alt="galleta_azul"
-          />
-        </section>
+        <img
+          className={`images_galletas ${classGalleta1}`}
+          src={galleta_azul}
+          alt="galleta_azul"
+        />
+        <img
+          className={`images_galletas ${classGalleta2}`}
+          src={galleta_azul}
+          alt="galleta_azul"
+        />
+        <img
+          className={`images_galletas ${classGalleta3}`}
+          src={galleta_azul}
+          alt="galleta_azul"
+        />
 
-        <section>
-          <img
-            className={`images_huevo ${classHuevo1}`}
-            src={huevo_blanco}
-            alt="huevo_blanco"
-          />
-          <img
-            className={`images_huevo ${classHuevo2}`}
-            src={huevo_blanco}
-            alt="huevo_blanco"
-          />
-          <img
-            className={`images_huevo ${classHuevo3}`}
-            src={huevo_blanco}
-            alt="huevo_blanco"
-          />
-        </section>
-        <section>
-          <img
-            className={`images_rana ${classRana1}`}
-            src={rana_verde}
-            alt="rana_verde"
-          />
-          <img
-            className={`images_rana ${classRana2}`}
-            src={rana_verde}
-            alt="rana_verde"
-          />
-          <img
-            className={`images_rana ${classRana3}`}
-            src={rana_verde}
-            alt="rana_verde"
-          />
-        </section>
+        <img
+          className={`images_huevo ${classHuevo1}`}
+          src={huevo_blanco}
+          alt="huevo_blanco"
+        />
+        <img
+          className={`images_huevo ${classHuevo2}`}
+          src={huevo_blanco}
+          alt="huevo_blanco"
+        />
+        <img
+          className={`images_huevo ${classHuevo3}`}
+          src={huevo_blanco}
+          alt="huevo_blanco"
+        />
+
+        <img
+          className={`images_rana ${classRana1}`}
+          src={rana_verde}
+          alt="rana_verde"
+        />
+        <img
+          className={`images_rana ${classRana2}`}
+          src={rana_verde}
+          alt="rana_verde"
+        />
+        <img
+          className={`images_rana ${classRana3}`}
+          src={rana_verde}
+          alt="rana_verde"
+        />
       </section>
     </div>
   );

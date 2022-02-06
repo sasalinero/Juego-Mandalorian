@@ -1,36 +1,124 @@
 .grid {
   display: grid;
-  grid-template-columns: auto, auto, auto, auto, auto, auto, auto;
-  grid-template-rows: auto, auto;
-  justify-content: space-around;
-  align-items: baseline;
-  justify-items: center;
+
+  grid-template-columns: repeat(6, 16px);
+  grid-template-rows: 50%, 50%;
+
+  gap: 30px;
 }
-.cesped {
-  width: 100px;
-  height: 70px;
-}
-.yoda {
+
+.yoda1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 80px;
   height: 80px;
-}
-.yoda1 {
   grid-column: 1/2;
   grid-row: 1/2;
-  margin-right: 50px;
 }
 .yoda2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.yoda3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.yoda4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+
+.yoda5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+.yoda6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  grid-column: 2/3;
+  grid-row: 6/7;
+}
+
+.cesped1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 70px;
   grid-column: 2/3;
   grid-row: 1/2;
 }
-.cesped1 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
 .cesped2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 70px;
   grid-column: 2/3;
   grid-row: 2/3;
 }
+.cesped3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 70px;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.cesped4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 70px;
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+.cesped5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 70px;
+  grid-column: 2/3;
+  grid-row: 5/6;
+}
+.cesped6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 70px;
+  grid-column: 2/3;
+  grid-row: 6/7;
+}
+
 .dado {
   //background-image: url("../images/dado_pres.png");
 }
