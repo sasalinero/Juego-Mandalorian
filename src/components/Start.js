@@ -7,7 +7,7 @@ const Start = () => {
     <div className="background_start">
       <Link to="/game">
         <section className="display">
-          <button className="button_newGame">“Empezar nueva aventura”</button>
+          <button className="button_newGame">Empezar nueva aventura</button>
         </section>
       </Link>
     </div>

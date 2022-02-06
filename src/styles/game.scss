@@ -4,7 +4,10 @@
 .arrow {
   @include arrow;
 }
-.dice {
+.display_dice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .dice_imagen {
   width: 100px;
@@ -85,41 +88,62 @@
   grid-column: 6/7;
   grid-row: 1/2;
 }
-.cesped {
-  @include cesped;
+.grass {
+  @include grass;
 }
-.cesped1 {
+.grass1 {
   //margin-right: 20px;
   grid-column: 1/2;
   grid-row: 2/3;
 }
-.cesped2 {
+.grass2 {
   grid-column: 2/3;
   grid-row: 2/3;
 }
-.cesped3 {
+.grass3 {
   grid-column: 3/4;
   grid-row: 2/3;
 }
-.cesped4 {
+.grass4 {
   grid-column: 4/5;
   grid-row: 2/3;
 }
-.cesped5 {
+.grass5 {
   grid-column: 5/6;
   grid-row: 2/3;
 }
-.cesped6 {
+.grass6 {
   grid-column: 6/7;
   grid-row: 2/3;
 }
 
-.images_galletas {
+.images_cookies {
   @include images;
-  margin-left: 60px;
-  margin-top: 200px;
+  //margin-left: 60px;
+  //margin-top: 200px;
   grid-column: 8/9;
   grid-row: 1/2;
+}
+.grid_cookies {
+  display: grid;
+  grid-template-rows: auto, auto;
+  grid-template-columns: auto, auto;
+  grid-column: 8/9;
+  grid-row: 1/2;
+  align-content: center;
+  padding: 40px;
+}
+.cookie1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.cookie2 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.cookie3 {
+  grid-row: 1/2;
+  grid-column: 2/3;
 }
 .images_egg {
   @include images;
@@ -138,12 +162,13 @@
   margin-left: -100px;
 }
 .recipient1 {
-  width: 150px;
+  width: 180px;
   grid-column: 8/9;
   grid-row: 1/2;
-  margin-top: 130px;
+  margin-top: 100px;
   margin-bottom: 0px;
   z-index: 1;
+  //margin-left: 30px;
 }
 .recipient2 {
   display: flex;

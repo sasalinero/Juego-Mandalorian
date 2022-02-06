@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/game.scss";
 import green_grass from "../images/cesped.png";
-import grogu from "../images/yoda.jpg";
-import dice from "../images/dado.jpg";
+import grogu_image from "../images/yoda.jpg";
+import dice_start from "../images/dado.jpg";
 import blue_cookie from "../images/galleta.jpg";
 import white_egg from "../images/huevo.jpg";
 import green_frog from "../images/rana.png";
 import recipient from "../images/vasija.png";
-import App from "./App";
+
 import wardrobe from "../images/armario2.png";
 import arrow from "../images/flecha.png";
 
@@ -17,9 +17,8 @@ const Game = () => {
 
   const [frog, setFrog] = useState(3);
   const [egg, setEgg] = useState(3);
-  const [galleta, setGalleta] = useState(3);
-  const [cesped, setCesped] = useState(6);
-  const [dice, setDice] = useState(["frog", "egg", "galleta", "grogu"]);
+  const [cookie, setCookie] = useState(3);
+  const [dice, setDice] = useState(["frog", "egg", "cookie", "grogu"]);
   const [grogu, setGrogu] = useState(0);
 
   const [classFrog1, setClassFrog1] = useState("");
@@ -30,9 +29,9 @@ const Game = () => {
   const [classEgg2, setClassEgg2] = useState("");
   const [classEgg3, setClassEgg3] = useState("");
 
-  const [classGalleta1, setClassGalleta1] = useState("");
-  const [classGalleta2, setClassGalleta2] = useState("");
-  const [classGalleta3, setClassGalleta3] = useState("");
+  const [classCookie1, setClassCookie1] = useState("");
+  const [classCookie2, setClassCookie2] = useState("");
+  const [classCookie3, setClassCookie3] = useState("");
 
   const [classMoveGrogu1, setClassMoveGrogu1] = useState("hidden");
   const [classMoveGrogu2, setClassMoveGrogu2] = useState("hidden");
@@ -69,17 +68,17 @@ const Game = () => {
     setEgg(egg - 1);
   };
   ///////////////////////ELIMINAR LAS GALLETAS/////////////////////
-  const removeGalleta = () => {
-    if (galleta === 3) {
-      setClassGalleta3("hidden");
-    } else if (galleta === 2) {
-      setClassGalleta2("hidden");
-    } else if (galleta === 1) {
-      setClassGalleta1("hidden");
-    } else if (galleta === 0) {
+  const removeCookie = () => {
+    if (cookie === 3) {
+      setClassCookie3("hidden");
+    } else if (cookie === 2) {
+      setClassCookie2("hidden");
+    } else if (cookie === 1) {
+      setClassCookie1("hidden");
+    } else if (cookie === 0) {
       moveGrogu();
     }
-    setGalleta(galleta - 1);
+    setCookie(cookie - 1);
   };
 
   //////////////////////MOVER A GROGU//////////////////////////////////
@@ -111,9 +110,9 @@ const Game = () => {
 
   const handleClick = () => {
     let imagen = Math.floor(Math.random() * dice.length);
-    let resultadoDice = dice[imagen];
+    let diceResult = dice[imagen];
 
-    switch (resultadoDice) {
+    switch (diceResult) {
       case "frog":
         removeFrog();
 
@@ -121,8 +120,8 @@ const Game = () => {
       case "egg":
         removeEgg();
         break;
-      case "galleta":
-        removeGalleta();
+      case "cookie":
+        removeCookie();
         break;
       case "grogu":
         moveGrogu();
@@ -141,31 +140,33 @@ const Game = () => {
           <img className="arrow" src={arrow} alt="arrow" />
         </button>
       </Link>{" "}
-      <section>
+      <section className="display_dice">
         <button onClick={handleClick} className="dice">
           {" "}
-          <img className="dice_imagen" src={dice} alt="dice" />
+          <img className="dice_imagen" src={dice_start} alt="dice" />
         </button>{" "}
       </section>{" "}
       <section className="grid">
-        <img src={recipient} className="recipient1" alt="recipient" />
         <img src={recipient} className="recipient2" alt="recipient" />
         <img src={recipient} className="recipient3" alt="recipient" />
-        <img
-          className={`images_galletas ${classGalleta1}`}
-          src={blue_cookie}
-          alt="blue_cookie"
-        />
-        <img
-          className={`images_galletas ${classGalleta2}`}
-          src={blue_cookie}
-          alt="blue_cookie"
-        />
-        <img
-          className={`images_galletas ${classGalleta3}`}
-          src={blue_cookie}
-          alt="blue_cookie"
-        />
+        <img src={recipient} className="recipient1" alt="recipient" />
+        <section className="grid_cookies">
+          <img
+            className={`cookie1 images_cookies ${classCookie1}`}
+            src={blue_cookie}
+            alt="blue_cookie"
+          />
+          <img
+            className={`cookie2 images_cookies ${classCookie2}`}
+            src={blue_cookie}
+            alt="blue_cookie"
+          />
+          <img
+            className={`cookie3 images_cookies ${classCookie3}`}
+            src={blue_cookie}
+            alt="blue_cookie"
+          />
+        </section>
         <img
           className={`images_egg ${classEgg1}`}
           src={white_egg}
@@ -199,41 +200,41 @@ const Game = () => {
         />
         <img
           className={`grogu grogu1  ${classMoveGrogu1}`}
-          src={grogu}
+          src={grogu_image}
           alt="babgrogu"
         />
         <img
           className={`grogu grogu2  ${classMoveGrogu2}`}
-          src={grogu}
+          src={grogu_image}
           alt="babgrogu"
         />
         <img
           className={`grogu grogu3  ${classMoveGrogu3}`}
-          src={grogu}
+          src={grogu_image}
           alt="babgrogu"
         />
         <img
           className={`grogu grogu4  ${classMoveGrogu4}`}
-          src={grogu}
+          src={grogu_image}
           alt="babgrogu"
         />
         <img
           className={`grogu grogu5  ${classMoveGrogu5}`}
-          src={grogu}
+          src={grogu_image}
           alt="babgrogu"
         />
         <img
           className={`grogu grogu6  ${classMoveGrogu6}`}
-          src={grogu}
+          src={grogu_image}
           alt="babgrogu"
         />
 
-        <img className="cesped cesped1" src={green_grass} alt="green_grass" />
-        <img className="cesped cesped2" src={green_grass} alt="green_grass" />
-        <img className="cesped cesped3" src={green_grass} alt="green_grass" />
-        <img className="cesped cesped4" src={green_grass} alt="green_grass" />
-        <img className="cesped cesped5" src={green_grass} alt="green_grass" />
-        <img className="cesped cesped6" src={green_grass} alt="green_grass" />
+        <img className="grass grass1" src={green_grass} alt="green_grass" />
+        <img className="grass grass2" src={green_grass} alt="green_grass" />
+        <img className="grass grass3" src={green_grass} alt="green_grass" />
+        <img className="grass grass4" src={green_grass} alt="green_grass" />
+        <img className="grass grass5" src={green_grass} alt="green_grass" />
+        <img className="grass grass6" src={green_grass} alt="green_grass" />
         <img className="wardrobe" src={wardrobe} alt="wardrobe" />
 
         {/* <img className="wardrobe" src={wardrobe} alt="wardrobe" /> */}

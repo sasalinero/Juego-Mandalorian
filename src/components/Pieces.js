@@ -23,12 +23,12 @@ const Pieces = () => {
       <ul>
         <li>
           Ficha de zona de carga{" "}
-          <img className="cesped_pieces" src={green_grass} alt="" />
-          <img className="cesped_pieces" src={green_grass} alt="" />
-          <img className="cesped_pieces" src={green_grass} alt="" />
-          <img className="cesped_pieces" src={green_grass} alt="" />
-          <img className="cesped_pieces" src={green_grass} alt="" />
-          <img className="cesped_pieces" src={green_grass} alt="" />
+          <img className="grass_pieces" src={green_grass} alt="" />
+          <img className="grass_pieces" src={green_grass} alt="" />
+          <img className="grass_pieces" src={green_grass} alt="" />
+          <img className="grass_pieces" src={green_grass} alt="" />
+          <img className="grass_pieces" src={green_grass} alt="" />
+          <img className="grass_pieces" src={green_grass} alt="" />
           (x6)
         </li>
         <li>
