@@ -5,5 +5,49 @@
   @include background;
   color: #f5f5f5;
   height: 100vh;
-  font-size: 40px;
+
+  font-size: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 60px;
+}
+h1 {
+  font-size: 60px;
+}
+.cesped_pieces {
+  width: 150px;
+  height: 70px;
+}
+.wardrobe_pieces {
+  width: 150px;
+  height: 70px;
+}
+.recipient_pieces {
+  width: 100px;
+  height: 70px;
+  margin-right: 50px;
+}
+.blue_cookie {
+  width: 90px;
+  height: 50px;
+  margin-right: 50px;
+}
+.green_frog {
+  width: 100px;
+  height: 70px;
+  margin-right: 50px;
+}
+.dado_pieces {
+  width: 100px;
+  height: 70px;
+}
+.grogu_pieces {
+  width: 80px;
+  height: 50px;
+}
+.arrow {
+  @include arrow;
 }

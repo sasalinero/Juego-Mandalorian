@@ -22,7 +22,7 @@ const Layout = () => {
           <li>
             <Link to="/pieces">
               <button className="button_layout" onClick={handleClick}>
-                PIECES
+                FICHAS
               </button>
             </Link>
           </li>
@@ -30,14 +30,14 @@ const Layout = () => {
             {" "}
             <Link to="/start">
               <button onClick={handleClick} className="button_game">
-                GAME
+                JUEGO
               </button>
             </Link>
           </li>
           <li>
             <Link to="/rules">
               <button onClick={handleClick} className="button_rules">
-                RULES
+                REGLAS
               </button>
             </Link>
           </li>

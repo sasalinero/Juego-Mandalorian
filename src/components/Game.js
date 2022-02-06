@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/game.scss";
-import cesped_verde from "../images/cesped.png";
+import green_grass from "../images/cesped.png";
 import grogu from "../images/yoda.jpg";
 import dado_juego from "../images/dado.jpg";
-import galleta_azul from "../images/galleta.jpg";
-import huevo_blanco from "../images/huevo.png";
-import rana_verde from "../images/rana.png";
-import vasija from "../images/vasija.png";
+import blue_cookie from "../images/galleta.jpg";
+import white_egg from "../images/huevo.jpg";
+import green_frog from "../images/rana.png";
+import recipient from "../images/vasija.png";
 import App from "./App";
-import armario from "../images/armario2.png";
-import flecha from "../images/flecha.png";
+import wardrobe from "../images/armario2.png";
+import arrow from "../images/flecha.png";
 
 const Game = () => {
   /////////////////////////////////////////VARIABLES DE ESTADO/////////////////////////////////////////////////////////////////////////////////
@@ -19,8 +19,8 @@ const Game = () => {
   const [huevo, setHuevo] = useState(3);
   const [galleta, setGalleta] = useState(3);
   const [cesped, setCesped] = useState(6);
-  const [dado, setDado] = useState(["rana", "huevo", "galleta", "yoda"]);
-  const [yoda, setYoda] = useState(0);
+  const [dado, setDado] = useState(["rana", "huevo", "galleta", "grogu"]);
+  const [grogu, setYoda] = useState(0);
 
   const [classRana1, setClassRana1] = useState("");
   const [classRana2, setClassRana2] = useState("");
@@ -85,23 +85,23 @@ const Game = () => {
   //////////////////////MOVER A GROGU//////////////////////////////////
 
   const moveGrogu = () => {
-    setYoda(yoda + 1);
+    setYoda(grogu + 1);
 
-    if (yoda === 0) {
+    if (grogu === 0) {
       setClassMoveYoda1("");
-    } else if (yoda === 1) {
+    } else if (grogu === 1) {
       setClassMoveYoda2("");
       setClassMoveYoda1("hidden");
-    } else if (yoda === 2) {
+    } else if (grogu === 2) {
       setClassMoveYoda3("");
       setClassMoveYoda2("hidden");
-    } else if (yoda === 3) {
+    } else if (grogu === 3) {
       setClassMoveYoda4("");
       setClassMoveYoda3("hidden");
-    } else if (yoda === 4) {
+    } else if (grogu === 4) {
       setClassMoveYoda5("");
       setClassMoveYoda4("hidden");
-    } else if (yoda === 5) {
+    } else if (grogu === 5) {
       setClassMoveYoda6("");
       setClassMoveYoda5("hidden");
     }
@@ -124,7 +124,7 @@ const Game = () => {
       case "galleta":
         removeGalleta();
         break;
-      case "yoda":
+      case "grogu":
         moveGrogu();
         break;
       default:
@@ -138,7 +138,7 @@ const Game = () => {
     <div className="background_game">
       <Link to="/">
         <button>
-          <img className="flecha" src={flecha} alt="flecha" />
+          <img className="arrow" src={arrow} alt="arrow" />
         </button>
       </Link>{" "}
       <section>
@@ -148,95 +148,95 @@ const Game = () => {
         </button>{" "}
       </section>{" "}
       <section className="grid">
-        <img src={vasija} className="vasija1" alt="vasija" />
-        <img src={vasija} className="vasija2" alt="vasija" />
-        <img src={vasija} className="vasija3" alt="vasija" />
+        <img src={recipient} className="recipient1" alt="recipient" />
+        <img src={recipient} className="recipient2" alt="recipient" />
+        <img src={recipient} className="recipient3" alt="recipient" />
         <img
           className={`images_galletas ${classGalleta1}`}
-          src={galleta_azul}
-          alt="galleta_azul"
+          src={blue_cookie}
+          alt="blue_cookie"
         />
         <img
           className={`images_galletas ${classGalleta2}`}
-          src={galleta_azul}
-          alt="galleta_azul"
+          src={blue_cookie}
+          alt="blue_cookie"
         />
         <img
           className={`images_galletas ${classGalleta3}`}
-          src={galleta_azul}
-          alt="galleta_azul"
+          src={blue_cookie}
+          alt="blue_cookie"
         />
         <img
           className={`images_huevo ${classHuevo1}`}
-          src={huevo_blanco}
-          alt="huevo_blanco"
+          src={white_egg}
+          alt="white_egg"
         />
         <img
           className={`images_huevo ${classHuevo2}`}
-          src={huevo_blanco}
-          alt="huevo_blanco"
+          src={white_egg}
+          alt="white_egg"
         />
         <img
           className={`images_huevo ${classHuevo3}`}
-          src={huevo_blanco}
-          alt="huevo_blanco"
+          src={white_egg}
+          alt="white_egg"
         />
 
         <img
           className={`images_rana ${classRana1}`}
-          src={rana_verde}
-          alt="rana_verde"
+          src={green_frog}
+          alt="green_frog"
         />
         <img
           className={`images_rana ${classRana2}`}
-          src={rana_verde}
-          alt="rana_verde"
+          src={green_frog}
+          alt="green_frog"
         />
         <img
           className={`images_rana ${classRana3}`}
-          src={rana_verde}
-          alt="rana_verde"
+          src={green_frog}
+          alt="green_frog"
         />
         <img
-          className={`yoda yoda1  ${classMoveYoda1}`}
+          className={`grogu grogu1  ${classMoveYoda1}`}
           src={grogu}
-          alt="babyoda"
+          alt="babgrogu"
         />
         <img
-          className={`yoda yoda2  ${classMoveYoda2}`}
+          className={`grogu grogu2  ${classMoveYoda2}`}
           src={grogu}
-          alt="babyoda"
+          alt="babgrogu"
         />
         <img
-          className={`yoda yoda3  ${classMoveYoda3}`}
+          className={`grogu grogu3  ${classMoveYoda3}`}
           src={grogu}
-          alt="babyoda"
+          alt="babgrogu"
         />
         <img
-          className={`yoda yoda4  ${classMoveYoda4}`}
+          className={`grogu grogu4  ${classMoveYoda4}`}
           src={grogu}
-          alt="babyoda"
+          alt="babgrogu"
         />
         <img
-          className={`yoda yoda5  ${classMoveYoda5}`}
+          className={`grogu grogu5  ${classMoveYoda5}`}
           src={grogu}
-          alt="babyoda"
+          alt="babgrogu"
         />
         <img
-          className={`yoda yoda6  ${classMoveYoda6}`}
+          className={`grogu grogu6  ${classMoveYoda6}`}
           src={grogu}
-          alt="babyoda"
+          alt="babgrogu"
         />
 
-        <img className="cesped cesped1" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped cesped2" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped cesped3" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped cesped4" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped cesped5" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped cesped6" src={cesped_verde} alt="cesped_verde" />
-        <img className="armario" src={armario} alt="armario" />
+        <img className="cesped cesped1" src={green_grass} alt="green_grass" />
+        <img className="cesped cesped2" src={green_grass} alt="green_grass" />
+        <img className="cesped cesped3" src={green_grass} alt="green_grass" />
+        <img className="cesped cesped4" src={green_grass} alt="green_grass" />
+        <img className="cesped cesped5" src={green_grass} alt="green_grass" />
+        <img className="cesped cesped6" src={green_grass} alt="green_grass" />
+        <img className="wardrobe" src={wardrobe} alt="wardrobe" />
 
-        {/* <img className="armario" src={armario} alt="armario" /> */}
+        {/* <img className="wardrobe" src={wardrobe} alt="wardrobe" /> */}
       </section>
     </div>
   );
