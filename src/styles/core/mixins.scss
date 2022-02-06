@@ -7,3 +7,13 @@
   background-size: cover;
   margin-top: 0px;
 }
+@mixin cesped {
+  width: 150px;
+  height: 70px;
+  margin-bottom: 300px;
+}
+@mixin yoda {
+  width: 90px;
+  height: 90px;
+  margin-top: 300px;
+}

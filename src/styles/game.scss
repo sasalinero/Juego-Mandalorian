@@ -1,130 +1,86 @@
+@import "./core/mixins.scss";
+@import "./core/variables.scss";
+
+.dado {
+  display: flex;
+}
+
 .grid {
   display: grid;
-
-  grid-template-columns: repeat(6, 16px);
-  grid-template-rows: 50%, 50%;
+  grid-template-columns: repeat(9, 100px);
+  grid-template-rows: auto, auto;
   background-color: pink;
+  justify-content: center;
+  grid-gap: 100px;
+}
 
-  gap: 30px;
+.yoda {
+  border: red 10px solid;
 }
 
 .yoda1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
+  @include yoda;
   grid-column: 1/2;
   grid-row: 1/2;
 }
 .yoda2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-
-.yoda3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-.yoda4 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  grid-column: 2/3;
-  grid-row: 4/5;
-}
-
-.yoda5 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  grid-column: 1/2;
-  grid-row: 5/6;
-}
-.yoda6 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  grid-column: 2/3;
-  grid-row: 6/7;
-}
-
-.cesped1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 70px;
+  @include yoda;
   grid-column: 2/3;
   grid-row: 1/2;
 }
+
+.yoda3 {
+  @include yoda;
+
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.yoda4 {
+  @include yoda;
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+
+.yoda5 {
+  @include yoda;
+  grid-column: 5/6;
+  grid-row: 1/2;
+}
+.yoda6 {
+  @include yoda;
+  grid-column: 6/7;
+  grid-row: 1/2;
+}
+.cesped {
+  @include cesped;
+}
+.cesped1 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
 .cesped2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 70px;
   grid-column: 2/3;
   grid-row: 2/3;
 }
 .cesped3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 70px;
-  grid-column: 2/3;
-  grid-row: 3/4;
+  grid-column: 3/4;
+  grid-row: 2/3;
 }
 .cesped4 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 70px;
-  grid-column: 2/3;
-  grid-row: 4/5;
+  grid-column: 4/5;
+  grid-row: 2/3;
 }
 .cesped5 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 70px;
-  grid-column: 2/3;
-  grid-row: 5/6;
+  grid-column: 5/6;
+  grid-row: 2/3;
 }
 .cesped6 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 70px;
-  grid-column: 2/3;
-  grid-row: 6/7;
+  grid-column: 6/7;
+  grid-row: 2/3;
 }
 
-// .dado {
-//   //background-image: url("../images/dado_pres.png");
-// }
-
 .images_galletas {
+  //position: absolute;
   width: 60px;
   height: 60px;
 }
@@ -140,44 +96,53 @@
   display: flex;
   justify-content: center;
   width: 300px;
+  grid-column: 7/8;
+  grid-row: 2/3;
   //margin-right: 800px;
   //margin-bottom: 00px;
-  position: absolute;
+  //position: absolute;
   //position: 100px;
-  top: 200px;
-  left: 1080px;
+  //top: 200px;
+  //left: 1080px;
+  z-index: 1;
 }
 .vasija2 {
   display: flex;
   justify-content: center;
   width: 300px;
-  margin-top: 400px;
-  //margin-bottom: 00px;
-  position: absolute;
-  //position: 100px;
-  top: 200px;
-  left: 1080px;
+  //margin-top: 400px;
+  grid-column: 8/9;
+  grid-row: 2/3;
+  z-index: 1;
 }
 .vasija3 {
   display: flex;
   justify-content: center;
   width: 300px;
-  margin-top: 200px;
-  margin-right: 100px;
-  //margin-bottom: 00px;
-  position: absolute;
-  //position: 100px;
-  top: 200px;
-  left: 1080px;
+  //margin-top: 200px;
+  //margin-right: 100px;
+
+  grid-column: 9/10;
+  grid-row: 2/3;
+  z-index: 1;
 }
 
+.dentro_armario {
+  //position: absolute;
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+}
 .armario {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 500px;
+  grid-column: 7/8;
+  grid-row: 1/3;
+  //position: absolute;
+  // display: flex;
+  // flex-direction: row;
+  // align-items: flex-end;
+  width: 700px;
 }
 
-.hidden {
-  visibility: hidden;
-}
+// .hidden {
+//   visibility: hidden;
+// }

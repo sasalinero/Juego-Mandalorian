@@ -143,51 +143,7 @@ const Game = () => {
           DADO
         </button>{" "}
       </section>{" "}
-      <section className="grid">
-        <img
-          className={`yoda yoda1  ${classMoveYoda1}`}
-          src={grogu}
-          alt="babyoda"
-        />
-        <img
-          className={`yoda yoda2  ${classMoveYoda2}`}
-          src={grogu}
-          alt="babyoda"
-        />
-        <img
-          className={`yoda yoda3  ${classMoveYoda3}`}
-          src={grogu}
-          alt="babyoda"
-        />
-        <img
-          className={`yoda yoda4  ${classMoveYoda4}`}
-          src={grogu}
-          alt="babyoda"
-        />
-        <img
-          className={`yoda yoda5  ${classMoveYoda5}`}
-          src={grogu}
-          alt="babyoda"
-        />
-        <img
-          className={`yoda yoda6  ${classMoveYoda6}`}
-          src={grogu}
-          alt="babyoda"
-        />
-
-        <img className="cesped cesped1" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped cesped2" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped cesped3" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped cesped4" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped cesped5" src={cesped_verde} alt="cesped_verde" />
-        <img className="cesped cesped6" src={cesped_verde} alt="cesped_verde" />
-      </section>
-      <section className="armario">
-        <img className="armario" src={armario} alt="armario" />
-        <img src={vasija} className="vasija1" alt="vasija" />
-        <img src={vasija} className="vasija2" alt="vasija" />
-        <img src={vasija} className="vasija3" alt="vasija" />
-
+      <section className="dentro_armario">
         <img
           className={`images_galletas ${classGalleta1}`}
           src={galleta_azul}
@@ -235,6 +191,51 @@ const Game = () => {
           src={rana_verde}
           alt="rana_verde"
         />
+      </section>
+      <section className="grid">
+        <img src={vasija} className="vasija1" alt="vasija" />
+        <img src={vasija} className="vasija2" alt="vasija" />
+        <img src={vasija} className="vasija3" alt="vasija" />
+        <img
+          className={`yoda yoda1  ${classMoveYoda1}`}
+          src={grogu}
+          alt="babyoda"
+        />
+        <img
+          className={`yoda yoda2  ${classMoveYoda2}`}
+          src={grogu}
+          alt="babyoda"
+        />
+        <img
+          className={`yoda yoda3  ${classMoveYoda3}`}
+          src={grogu}
+          alt="babyoda"
+        />
+        <img
+          className={`yoda yoda4  ${classMoveYoda4}`}
+          src={grogu}
+          alt="babyoda"
+        />
+        <img
+          className={`yoda yoda5  ${classMoveYoda5}`}
+          src={grogu}
+          alt="babyoda"
+        />
+        <img
+          className={`yoda yoda6  ${classMoveYoda6}`}
+          src={grogu}
+          alt="babyoda"
+        />
+
+        <img className="cesped cesped1" src={cesped_verde} alt="cesped_verde" />
+        <img className="cesped cesped2" src={cesped_verde} alt="cesped_verde" />
+        <img className="cesped cesped3" src={cesped_verde} alt="cesped_verde" />
+        <img className="cesped cesped4" src={cesped_verde} alt="cesped_verde" />
+        <img className="cesped cesped5" src={cesped_verde} alt="cesped_verde" />
+        <img className="cesped cesped6" src={cesped_verde} alt="cesped_verde" />
+        <img className="armario" src={armario} alt="armario" />
+
+        {/* <img className="armario" src={armario} alt="armario" /> */}
       </section>
     </div>
   );
