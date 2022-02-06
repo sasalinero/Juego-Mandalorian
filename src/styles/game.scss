@@ -1,10 +1,34 @@
 @import "./core/mixins.scss";
 @import "./core/variables.scss";
 
-.dado_imagen {
+.flecha {
   width: 80px;
   height: 80px;
+  background-color: white;
 }
+.dado {
+  display: flex;
+}
+.dado_imagen {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 80px;
+  border: 5px solid whitesmoke;
+  //padding: 20px 20px;
+  box-shadow: 0px 0px 80px;
+  animation: infinite resplandorAnimation 1s;
+}
+@keyframes resplandorAnimation {
+  0%,
+  100% {
+    box-shadow: 0px 0px 80px;
+  }
+  50% {
+    box-shadow: 0px 0px 0px;
+  }
+}
+
 .background_game {
   @include background;
 }
@@ -18,7 +42,19 @@
 }
 
 .yoda {
-  border: white 10px solid;
+  border: 5px solid yellowgreen;
+  //border: white 10px solid;
+  box-shadow: 0px 0px 20px;
+  animation: infinite resplandorAnimation 2s;
+}
+@keyframes resplandorAnimation {
+  0%,
+  100% {
+    box-shadow: 0px 0px 80px;
+  }
+  50% {
+    box-shadow: 0px 0px 0px;
+  }
 }
 
 .yoda1 {

@@ -4,7 +4,7 @@ import "../styles/pieces.scss";
 
 const Pieces = () => {
   return (
-    <div>
+    <div className="background_pieces">
       <Link to="/">
         <button>MENU</button>
       </Link>

@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import "../styles/game.scss";
 import cesped_verde from "../images/cesped.png";
 import grogu from "../images/yoda.jpg";
-import dado_juego from "../images/dado_pres.png";
+import dado_juego from "../images/dado.jpg";
 import galleta_azul from "../images/galleta.jpg";
-import huevo_blanco from "../images/huevo.jpg";
+import huevo_blanco from "../images/huevo.png";
 import rana_verde from "../images/rana.png";
 import vasija from "../images/vasija.png";
 import App from "./App";
 import armario from "../images/armario2.png";
+import flecha from "../images/flecha.png";
 
 const Game = () => {
   /////////////////////////////////////////VARIABLES DE ESTADO/////////////////////////////////////////////////////////////////////////////////
@@ -136,7 +137,9 @@ const Game = () => {
   return (
     <div className="background_game">
       <Link to="/">
-        <button>MENU</button>
+        <button>
+          <img className="flecha" src={flecha} alt="flecha" />
+        </button>
       </Link>{" "}
       <section>
         <button onClick={handleClick} className="dado">
