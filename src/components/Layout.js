@@ -1,8 +1,5 @@
 import "../styles/layout.scss";
 
-// import "./core/mixins.scss";
-// import "./core/variables.scss";
-
 import React from "react";
 import Game from "./Game";
 import Pieces from "./Pieces";
@@ -23,7 +20,7 @@ const Layout = () => {
   return (
     <div>
       <nav className="nav">
-        <ul>
+        <ul className="ul_layout">
           <li>
             <Link to="/pieces">
               <button className="button_layout" onClick={handleClick}>
