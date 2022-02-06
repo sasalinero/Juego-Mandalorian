@@ -4,9 +4,11 @@ import "../styles/start.scss";
 
 const Start = () => {
   return (
-    <div className="display">
+    <div className="background_start">
       <Link to="/game">
-        <button className="button_newGame">“Empezar nueva aventura”</button>
+        <section className="display">
+          <button className="button_newGame">“Empezar nueva aventura”</button>
+        </section>
       </Link>
     </div>
   );

@@ -8,8 +8,6 @@ import { Link } from "react-router-dom";
 
 const Layout = () => {
   const handleClick = () => {
-    console.log("me han clickado en JUGAR");
-
     return (
       <Link to="/start">
         <button>Empezar nueva aventura</button>
@@ -18,7 +16,7 @@ const Layout = () => {
   };
 
   return (
-    <div>
+    <div className="background_layout">
       <nav className="nav">
         <ul className="ul_layout">
           <li>

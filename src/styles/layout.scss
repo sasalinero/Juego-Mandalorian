@@ -1,6 +1,10 @@
 @import "./core/mixins.scss";
 @import "./core/variables.scss";
 
+.background_layout {
+  @include background;
+}
+
 .ul_layout {
   list-style: none;
   display: flex;
@@ -8,6 +12,7 @@
   justify-content: space-evenly;
   align-items: center;
   height: 100vh;
+  margin: 0px;
 }
 .button_layout {
   font-size: 100px;

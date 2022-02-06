@@ -1,6 +1,9 @@
 @import "./core/mixins.scss";
 @import "./core/variables.scss";
 
+.background_start {
+  @include background;
+}
 .display {
   display: flex;
   align-content: center;
