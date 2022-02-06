@@ -17,3 +17,8 @@
   height: 90px;
   margin-top: 300px;
 }
+@mixin images {
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+}

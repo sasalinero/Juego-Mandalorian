@@ -134,16 +134,20 @@ const Game = () => {
   /////////////////////////////LO QUE SE PINTA////////////////////////////////////
 
   return (
-    <div>
+    <div className="background_game">
       <Link to="/">
         <button>MENU</button>
       </Link>{" "}
       <section>
         <button onClick={handleClick} className="dado">
-          DADO
+          {" "}
+          <img className="dado_imagen" src={dado_juego} alt="dado" />
         </button>{" "}
       </section>{" "}
-      <section className="dentro_armario">
+      <section className="grid">
+        <img src={vasija} className="vasija1" alt="vasija" />
+        <img src={vasija} className="vasija2" alt="vasija" />
+        <img src={vasija} className="vasija3" alt="vasija" />
         <img
           className={`images_galletas ${classGalleta1}`}
           src={galleta_azul}
@@ -159,7 +163,6 @@ const Game = () => {
           src={galleta_azul}
           alt="galleta_azul"
         />
-
         <img
           className={`images_huevo ${classHuevo1}`}
           src={huevo_blanco}
@@ -191,11 +194,6 @@ const Game = () => {
           src={rana_verde}
           alt="rana_verde"
         />
-      </section>
-      <section className="grid">
-        <img src={vasija} className="vasija1" alt="vasija" />
-        <img src={vasija} className="vasija2" alt="vasija" />
-        <img src={vasija} className="vasija3" alt="vasija" />
         <img
           className={`yoda yoda1  ${classMoveYoda1}`}
           src={grogu}
