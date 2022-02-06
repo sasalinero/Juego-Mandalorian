@@ -6,10 +6,10 @@ import grogu from "../images/yoda.jpg";
 import dado_juego from "../images/dado_pres.png";
 import galleta_azul from "../images/galleta.jpg";
 import huevo_blanco from "../images/huevo.jpg";
-import rana_verde from "../images/rana.jpg";
-import vasija from "../images/vasija.jpg";
+import rana_verde from "../images/rana.png";
+import vasija from "../images/vasija.png";
 import App from "./App";
-import armario from "../images/armario.png";
+import armario from "../images/armario2.png";
 
 const Game = () => {
   /////////////////////////////////////////VARIABLES DE ESTADO/////////////////////////////////////////////////////////////////////////////////
