@@ -1,5 +1,4 @@
 @import "./core/mixins.scss";
-@import "./core/variables.scss";
 
 .background_layout {
   @include background;
@@ -24,11 +23,11 @@
   @include background_buttons;
 }
 .button_game:hover {
-  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  @include shadow;
 }
 .button_layout:hover {
-  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  @include shadow;
 }
 .button_rules:hover {
-  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  @include shadow;
 }

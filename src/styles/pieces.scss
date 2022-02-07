@@ -1,5 +1,4 @@
 @import "./core/mixins.scss";
-@import "./core/variables.scss";
 
 .background_pieces {
   @include background;
@@ -15,8 +14,7 @@
 h1 {
   font-size: 60px;
   margin: 20px;
-  box-shadow: 0 0 30px 30px orange;
-  background-color: rgb(74, 206, 211);
+  @include title;
   @include underline;
 }
 .grass_pieces {
