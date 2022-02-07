@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "./static/css/main.79a434b4.css",
+    "main.js": "./static/js/main.530bec0f.js",
+    "static/media/cesped.png": "./static/media/cesped.25bf7c1a3f693bc08fc6.png",
+    "static/media/armario2.png": "./static/media/armario2.7573030f493193845ef9.png",
+    "static/media/fondo2.jpg": "./static/media/fondo2.605e4dd04100fb350f99.jpg",
+    "static/media/huevo.jpg": "./static/media/huevo.72a7a843b56ad1f91940.jpg",
+    "static/media/rana.png": "./static/media/rana.db8d283f25355a1344a2.png",
+    "static/media/dado.jpg": "./static/media/dado.10c19e8b2d7d40c7c65c.jpg",
+    "static/media/galleta.jpg": "./static/media/galleta.7dca2d98cb9691da0700.jpg",
+    "static/media/yoda.jpg": "./static/media/yoda.ce0cf3cd391af68a97d7.jpg",
+    "static/media/vasija.png": "./static/media/vasija.4694b778dff328ea02aa.png",
+    "index.html": "./index.html",
+    "main.79a434b4.css.map": "./static/css/main.79a434b4.css.map",
+    "main.530bec0f.js.map": "./static/js/main.530bec0f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79a434b4.css",
+    "static/js/main.530bec0f.js"
+  ]
+}
