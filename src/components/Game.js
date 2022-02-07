@@ -39,7 +39,7 @@ const Game = () => {
   const [classMoveGrogu5, setClassMoveGrogu5] = useState("hidden");
   const [classMoveGrogu6, setClassMoveGrogu6] = useState("hidden");
 
-  const [download_text, setFrase] = useState("");
+  const [download_text, setDownloadText] = useState("");
 
   ////////////////////////FUNCIONES DEL SWITCH PARA ELIMINAR COMIDAS DEL ARMARIO//////////////////////////////////////
 
@@ -47,15 +47,15 @@ const Game = () => {
   const removeFrog = () => {
     if (frog === 3) {
       setClassFrog3("hidden");
-      setFrase("Has cogido una rana 🐸");
+      setDownloadText("Has cogido una rana 🐸");
     } else if (frog === 2) {
       setClassFrog2("hidden");
-      setFrase("Has cogido una rana 🐸");
+      setDownloadText("Has cogido una rana 🐸");
     } else if (frog === 1) {
       setClassFrog1("hidden");
-      setFrase("Has cogido una rana 🐸");
-    } else if (frog === 0) {
-      setFrase(" Grogu se mueve una casilla 👣");
+      setDownloadText("Has cogido una rana 🐸");
+    } else if (frog <= 0) {
+      setDownloadText(" Grogu se mueve una casilla 👣");
 
       moveGrogu();
     }
@@ -65,15 +65,15 @@ const Game = () => {
   const removeEgg = () => {
     if (egg === 3) {
       setClassEgg3("hidden");
-      setFrase("Has cogido un huevo 🥚");
+      setDownloadText("Has cogido un huevo 🥚");
     } else if (egg === 2) {
       setClassEgg2("hidden");
-      setFrase("Has cogido un huevo 🥚");
+      setDownloadText("Has cogido un huevo 🥚");
     } else if (egg === 1) {
       setClassEgg1("hidden");
-      setFrase("Has cogido un huevo 🥚");
-    } else if (egg === 0) {
-      setFrase(" Grogu se mueve una casilla 👣");
+      setDownloadText("Has cogido un huevo 🥚");
+    } else if (egg <= 0) {
+      setDownloadText(" Grogu se mueve una casilla 👣");
       moveGrogu();
     }
     setEgg(egg - 1);
@@ -82,15 +82,15 @@ const Game = () => {
   const removeCookie = () => {
     if (cookie === 3) {
       setClassCookie3("hidden");
-      setFrase("Has cogido una galleta 🍪");
+      setDownloadText("Has cogido una galleta 🍪");
     } else if (cookie === 2) {
       setClassCookie2("hidden");
-      setFrase("Has cogido una galleta 🍪");
+      setDownloadText("Has cogido una galleta 🍪");
     } else if (cookie === 1) {
       setClassCookie1("hidden");
-      setFrase("Has cogido una galleta 🍪");
-    } else if (cookie === 0) {
-      setFrase(" Grogu se mueve una casilla 👣");
+      setDownloadText("Has cogido una galleta 🍪");
+    } else if (cookie <= 0) {
+      setDownloadText(" Grogu se mueve una casilla 👣");
       moveGrogu();
     }
     setCookie(cookie - 1);
@@ -106,20 +106,24 @@ const Game = () => {
     } else if (grogu === 1) {
       setClassMoveGrogu2("");
       setClassMoveGrogu1("hidden");
+      setDownloadText(" Grogu se mueve una casilla 👣");
     } else if (grogu === 2) {
       setClassMoveGrogu3("");
       setClassMoveGrogu2("hidden");
+      setDownloadText(" Grogu se mueve una casilla 👣");
     } else if (grogu === 3) {
       setClassMoveGrogu4("");
       setClassMoveGrogu3("hidden");
+      setDownloadText(" Grogu se mueve una casilla 👣");
     } else if (grogu === 4) {
       setClassMoveGrogu5("");
       setClassMoveGrogu4("hidden");
+      setDownloadText(" Grogu se mueve una casilla 👣");
     } else if (grogu === 5) {
       setClassMoveGrogu6("");
       setClassMoveGrogu5("hidden");
+      setDownloadText(" ¡¡Has perdido!!");
     }
-    setFrase(" Grogu se mueve una casilla 👣");
   };
 
   ///////////////////////////////////////CUANDO PRESIONO EL DADO/////////////////////////////////////////////////////////
@@ -127,23 +131,26 @@ const Game = () => {
   const handleClick = () => {
     let imagen = Math.floor(Math.random() * dice.length);
     let diceResult = dice[imagen];
+    if (cookie <= 0 && egg <= 0 && frog <= 0) {
+      setDownloadText(" ¡¡Has ganado!!");
+    } else {
+      switch (diceResult) {
+        case "frog":
+          removeFrog();
 
-    switch (diceResult) {
-      case "frog":
-        removeFrog();
-
-        break;
-      case "egg":
-        removeEgg();
-        break;
-      case "cookie":
-        removeCookie();
-        break;
-      case "grogu":
-        moveGrogu();
-        break;
-      default:
-        break;
+          break;
+        case "egg":
+          removeEgg();
+          break;
+        case "cookie":
+          removeCookie();
+          break;
+        case "grogu":
+          moveGrogu();
+          break;
+        default:
+          break;
+      }
     }
   };
 
