@@ -7,7 +7,7 @@ import Pieces from "./Pieces";
 import Game from "./Game";
 import Rules from "./Rules";
 import Start from "./Start";
-import audio from "../images/musica.mp3";
+
 
 function App() {
   return (

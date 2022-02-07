@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/start.scss";
-import arrow from "../images/flecha.png";
+import arrow from "../images/volverm.png";
 
 const Start = () => {
   return (

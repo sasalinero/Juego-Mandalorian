@@ -5,12 +5,10 @@ import green_grass from "../images/cesped.png";
 import wardrobe from "../images/armario2.png";
 import recipient from "../images/vasija.png";
 import blue_cookie from "../images/galleta.jpg";
-import white_egg from "../images/huevo.png";
 import green_frog from "../images/rana.png";
 import grogu from "../images/yoda.jpg";
-import dice from "../images/dado.jpg";
-import arrow from "../images/flecha.png";
-import dice_start from "../images/jugar.png";
+import arrow from "../images/volverm.png";
+import dice_start from "../images/dado.jpg";
 
 const Pieces = () => {
   return (

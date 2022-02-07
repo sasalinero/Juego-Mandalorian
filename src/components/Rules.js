@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/rules.scss";
-import arrow from "../images/flecha.png";
+import arrow from "../images/volverm.png";
 
 const Rules = () => {
   return (
     <div className="background_rules">
+      <h1 className="title">Reglas del Juego</h1>
       <Link to="/">
         <button>
           <img className="arrow" src={arrow} alt="arrow" />
         </button>
       </Link>{" "}
-      <h1 className="title">Reglas del Juego</h1>
       <p className="text1">
         El juego es muy sencillo. Dispondremos de 6 casillas que representan un
         camino en la zona de carga de la Razor Crest que lleva hasta el armario

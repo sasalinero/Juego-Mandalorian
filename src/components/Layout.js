@@ -1,8 +1,5 @@
 import "../styles/layout.scss";
 import React from "react";
-import Game from "./Game";
-import Pieces from "./Pieces";
-import Rules from "./Rules";
 import { Link } from "react-router-dom";
 
 const Layout = () => {

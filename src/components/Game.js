@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import "../styles/game.scss";
 import green_grass from "../images/cesped.png";
 import grogu_image from "../images/yoda.jpg";
-import dice_start from "../images/jugar.png";
+import dice_start from "../images/dado.jpg";
 import blue_cookie from "../images/galleta.jpg";
 import white_egg from "../images/huevo.jpg";
 import green_frog from "../images/rana.png";
 import recipient from "../images/vasija.png";
 import wardrobe from "../images/armario2.png";
-import arrow from "../images/flecha.png";
+import arrow from "../images/volverm.png";
 
 const Game = () => {
   /////////////////////////////////////////VARIABLES DE ESTADO///////////////////////////////////////////////////////////
@@ -151,6 +151,7 @@ const Game = () => {
 
   return (
     <div className="background_game">
+      <p className="download_text">{download_text}</p>
       <Link to="/">
         <button>
           <img className="arrow" src={arrow} alt="arrow" />
@@ -161,7 +162,6 @@ const Game = () => {
           {" "}
           <img className="dice_imagen" src={dice_start} alt="dice" />
         </button>{" "}
-        <p className="download_text">{download_text}</p>
       </section>{" "}
       <section className="grid">
         {/*********************************** * RECIPIENTE DE GALLETAS *******************************/}
@@ -264,6 +264,7 @@ const Game = () => {
         <img className="grass grass4" src={green_grass} alt="green_grass" />
         <img className="grass grass5" src={green_grass} alt="green_grass" />
         <img className="grass grass6" src={green_grass} alt="green_grass" />
+
         <img className="wardrobe" src={wardrobe} alt="wardrobe" />
       </section>
     </div>
