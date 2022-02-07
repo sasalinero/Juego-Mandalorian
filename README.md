@@ -1,6 +1,6 @@
 <h1 align="center">¡Cuidado con Grogu!</h1>
 
-<p align="center"><img  src="./images/gif.gif" /></p>
+<p align="center"><img  src="./src/images/gif.gif" alt="gif" /></p>
 
 # ¿De qué trata este proyecto?
 
@@ -23,6 +23,6 @@ Este proyecto es un juego realizado con React.js. Hay que intentar vaciar el arm
 
 :heart: Samantha Salinero [Github](https://github.com/sasalinero)
 
-### Contacto 📱
+## Contacto 📱
 
-<a href="https://www.linkedin.com/in/samantha-salinero/" target="blank"><img align="center" src=https://www.linkedin.com/in/samantha-salinero/ alt="samantha" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/samantha-salinero/" target="about_blank"></a>
