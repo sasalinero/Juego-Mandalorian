@@ -25,4 +25,4 @@ Este proyecto es un juego realizado con React.js. Hay que intentar vaciar el arm
 
 ## Contacto 📱
 
-<a href="https://www.linkedin.com/in/samantha-salinero/" target="about_blank"></a>
+<a href="https://www.linkedin.com/in/samantha-salinero/" target="about_blank">Linkedin</a>
