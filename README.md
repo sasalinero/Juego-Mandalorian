@@ -1,6 +1,6 @@
 <h1 align="center">¡Cuidado con Grogu!</h1>
 
-<p align="center"><img  src="./images/gif.gif /></p>
+<p align="center"><img  src="./images/gif.gif" /></p>
 
 # ¿De qué trata este proyecto?
 
