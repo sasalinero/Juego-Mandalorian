@@ -10,6 +10,7 @@ import green_frog from "../images/rana.png";
 import grogu from "../images/yoda.jpg";
 import dice from "../images/dado.jpg";
 import arrow from "../images/flecha.png";
+import dice_start from "../images/jugar.png";
 
 const Pieces = () => {
   return (
@@ -59,7 +60,7 @@ const Pieces = () => {
         </li>
         <li>Huevos blancos de rana 🥚🥚🥚 (x3)</li>
         <li>
-          Dice <img className="dice_pieces" src={dice} alt="dice" /> (x1)
+          Dado <img className="dice_pieces" src={dice_start} alt="dice" /> (x1)
         </li>
         <li>
           Grogu <img className="grogu_pieces" src={grogu} alt="grogu" /> (x1)

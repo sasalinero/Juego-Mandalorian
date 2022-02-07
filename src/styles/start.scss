@@ -11,8 +11,10 @@
   align-items: center;
   height: 100vh;
 }
+
 .button_newGame {
   @include background_buttons;
-
-  font-size: 100px;
+}
+.button_newGame:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }

@@ -1,27 +1,26 @@
 @import "./core/mixins.scss";
 @import "./core/variables.scss";
-//@import "./core/reset.scss";
 
 .arrow {
   @include arrow;
 }
 .display_dice {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: inline-block;
+  @include background_buttons;
+  box-shadow: 0 0 40px 40px purple;
+  margin-left: 400px;
+  margin-top: 100px;
+  text-align: center;
 }
 .dice_imagen {
-  width: 100px;
-  height: 80px;
-  border: 5px solid whitesmoke;
-  //padding: 20px 20px;
-  box-shadow: 0px 0px 80px;
+  width: 200px;
+  height: 100px;
   animation: infinite resplandorAnimation 1s;
 }
 @keyframes resplandorAnimation {
   0%,
   100% {
-    box-shadow: 0px 0px 80px;
+    box-shadow: 0px 0px 60px;
   }
   50% {
     box-shadow: 0px 0px 0px;
@@ -35,16 +34,13 @@
   display: grid;
   grid-template-columns: repeat(9, 100px);
   grid-template-rows: auto, auto, auto;
-
   justify-content: space-between;
   grid-gap: 60px;
 }
 
 .grogu {
-  border: 5px solid yellowgreen;
-  //border: white 10px solid;
-  box-shadow: 0px 0px 20px;
-  animation: infinite resplandorAnimation 2s;
+  box-shadow: 0 0 30px 30px purple;
+  margin-left: 30px;
 }
 @keyframes resplandorAnimation {
   0%,
@@ -93,7 +89,6 @@
   @include grass;
 }
 .grass1 {
-  //margin-right: 20px;
   grid-column: 1/2;
   grid-row: 2/3;
 }
@@ -181,23 +176,18 @@
 }
 .images_frog {
   @include images;
-  //margin-right: 100px;
   display: flex;
 }
 .frog1 {
   grid-row: 1/2;
   grid-column: 1/2;
-  // margin-right: 100px;
   margin-top: 200px;
 }
 .frog2 {
-  // margin-top: 100px;
   grid-row: 2/2;
   grid-column: 2/3;
-  //margin-right: 100px;
 }
 .frog3 {
-  // margin-top: 100px;
   grid-row: 2/3;
   grid-column: 1/2;
 }
@@ -206,7 +196,6 @@
   grid-column: 8/9;
   grid-row: 1/2;
   margin-top: 100px;
-  //margin-bottom: 0px;
   z-index: 1;
 }
 .recipient2 {
@@ -218,14 +207,8 @@
   z-index: 1;
 }
 .recipient3 {
-  // display: flex;
-  // justify-content: center;
-  // width: 150px;
   margin-top: -540px;
   width: 180px;
-
-  // margin-top: 0px;
-  // margin-bottom: 100px;
   z-index: 1;
   grid-column: 8/9;
   grid-row: 3/4;
@@ -242,6 +225,8 @@
 .hidden {
   visibility: hidden;
 }
-.download {
-  color: blueviolet;
+.download_text {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
 }

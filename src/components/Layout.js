@@ -1,5 +1,4 @@
 import "../styles/layout.scss";
-
 import React from "react";
 import Game from "./Game";
 import Pieces from "./Pieces";
@@ -10,7 +9,7 @@ const Layout = () => {
   const handleClick = () => {
     return (
       <Link to="/start">
-        <button>Empezar nueva aventura</button>
+        <button>Nueva aventura</button>
       </Link>
     );
   };

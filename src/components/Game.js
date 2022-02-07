@@ -3,17 +3,16 @@ import { Link } from "react-router-dom";
 import "../styles/game.scss";
 import green_grass from "../images/cesped.png";
 import grogu_image from "../images/yoda.jpg";
-import dice_start from "../images/dado.jpg";
+import dice_start from "../images/jugar.png";
 import blue_cookie from "../images/galleta.jpg";
 import white_egg from "../images/huevo.jpg";
 import green_frog from "../images/rana.png";
 import recipient from "../images/vasija.png";
-
 import wardrobe from "../images/armario2.png";
 import arrow from "../images/flecha.png";
 
 const Game = () => {
-  /////////////////////////////////////////VARIABLES DE ESTADO/////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////VARIABLES DE ESTADO///////////////////////////////////////////////////////////
 
   const [frog, setFrog] = useState(3);
   const [egg, setEgg] = useState(3);
@@ -40,31 +39,41 @@ const Game = () => {
   const [classMoveGrogu5, setClassMoveGrogu5] = useState("hidden");
   const [classMoveGrogu6, setClassMoveGrogu6] = useState("hidden");
 
-  const donwnload_cookie = "Descargas una caja de galletas azules 🍪";
+  const [download_text, setFrase] = useState("");
 
-  ///////////////////////////////////////////////////////////FUNCIONES DEL SWITCH PARA ELIMINAR COMIDAS DEL ARMARIO//////////////////////////////////////////////////////
+  ////////////////////////FUNCIONES DEL SWITCH PARA ELIMINAR COMIDAS DEL ARMARIO//////////////////////////////////////
+
   ////////////////ELIMINAR LAS RANAS///////////////////
   const removeFrog = () => {
     if (frog === 3) {
       setClassFrog3("hidden");
+      setFrase("Has cogido una rana 🐸");
     } else if (frog === 2) {
       setClassFrog2("hidden");
+      setFrase("Has cogido una rana 🐸");
     } else if (frog === 1) {
       setClassFrog1("hidden");
+      setFrase("Has cogido una rana 🐸");
     } else if (frog === 0) {
+      setFrase(" Grogu se mueve una casilla 👣");
+
       moveGrogu();
     }
     setFrog(frog - 1);
   };
-  /////////////////////////ELIMINAR LOS HUEVOS////////////////////
+  /////////////////ELIMINAR LOS HUEVOS////////////////////
   const removeEgg = () => {
     if (egg === 3) {
       setClassEgg3("hidden");
+      setFrase("Has cogido un huevo 🥚");
     } else if (egg === 2) {
       setClassEgg2("hidden");
+      setFrase("Has cogido un huevo 🥚");
     } else if (egg === 1) {
       setClassEgg1("hidden");
+      setFrase("Has cogido un huevo 🥚");
     } else if (egg === 0) {
+      setFrase(" Grogu se mueve una casilla 👣");
       moveGrogu();
     }
     setEgg(egg - 1);
@@ -73,11 +82,15 @@ const Game = () => {
   const removeCookie = () => {
     if (cookie === 3) {
       setClassCookie3("hidden");
+      setFrase("Has cogido una galleta 🍪");
     } else if (cookie === 2) {
       setClassCookie2("hidden");
+      setFrase("Has cogido una galleta 🍪");
     } else if (cookie === 1) {
       setClassCookie1("hidden");
+      setFrase("Has cogido una galleta 🍪");
     } else if (cookie === 0) {
+      setFrase(" Grogu se mueve una casilla 👣");
       moveGrogu();
     }
     setCookie(cookie - 1);
@@ -106,9 +119,10 @@ const Game = () => {
       setClassMoveGrogu6("");
       setClassMoveGrogu5("hidden");
     }
+    setFrase(" Grogu se mueve una casilla 👣");
   };
 
-  ////////////////////////////////////////CUANDO PRESIONO EL DADO/////////////////////////////////////////////////////////
+  ///////////////////////////////////////CUANDO PRESIONO EL DADO/////////////////////////////////////////////////////////
 
   const handleClick = () => {
     let imagen = Math.floor(Math.random() * dice.length);
@@ -147,8 +161,11 @@ const Game = () => {
           {" "}
           <img className="dice_imagen" src={dice_start} alt="dice" />
         </button>{" "}
+        <p className="download_text">{download_text}</p>
       </section>{" "}
       <section className="grid">
+        {/*********************************** * RECIPIENTE DE GALLETAS *******************************/}
+
         <img src={recipient} className="recipient1" alt="recipient" />
         <section className="grid_cookies">
           <img
@@ -167,6 +184,8 @@ const Game = () => {
             alt="blue_cookie"
           />
         </section>
+        {/*********************************** * RECIPIENTE DE HUEVOS *******************************/}
+
         <img src={recipient} className="recipient3" alt="recipient" />
         <section className="grid_egg">
           <img
@@ -185,6 +204,8 @@ const Game = () => {
             alt="white_egg"
           />
         </section>
+        {/*********************************** * RECIPIENTE DE RANAS *******************************/}
+
         <img src={recipient} className="recipient2" alt="recipient" />
         <section className="grid_frog">
           <img
@@ -203,6 +224,8 @@ const Game = () => {
             alt="green_frog"
           />
         </section>
+
+        {/*********************************** * SECCION DE GROGU *******************************/}
         <img
           className={`grogu grogu1  ${classMoveGrogu1}`}
           src={grogu_image}
@@ -233,6 +256,7 @@ const Game = () => {
           src={grogu_image}
           alt="babgrogu"
         />
+        {/*********************************** * SECCION DE CESPED *******************************/}
 
         <img className="grass grass1" src={green_grass} alt="green_grass" />
         <img className="grass grass2" src={green_grass} alt="green_grass" />
@@ -241,8 +265,6 @@ const Game = () => {
         <img className="grass grass5" src={green_grass} alt="green_grass" />
         <img className="grass grass6" src={green_grass} alt="green_grass" />
         <img className="wardrobe" src={wardrobe} alt="wardrobe" />
-
-        {/* <img className="wardrobe" src={wardrobe} alt="wardrobe" /> */}
       </section>
     </div>
   );

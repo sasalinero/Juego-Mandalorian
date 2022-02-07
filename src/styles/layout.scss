@@ -15,14 +15,20 @@
   margin: 0px;
 }
 .button_layout {
-  font-size: 90px;
   @include background_buttons;
 }
 .button_game {
-  font-size: 90px;
   @include background_buttons;
 }
 .button_rules {
-  font-size: 90px;
   @include background_buttons;
+}
+.button_game:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+.button_layout:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+.button_rules:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }

@@ -1,5 +1,9 @@
 @mixin background_buttons {
-  background-color: cadetblue;
+  background-color: rgb(74, 206, 211);
+  border-radius: 20px;
+  color: black;
+  box-shadow: 0 0 40px 40px rgb(208, 255, 0);
+  font-size: 90px;
 }
 @mixin background {
   background-image: url(../images/estrellas.jpg);
@@ -14,8 +18,8 @@
   margin-bottom: 300px;
 }
 @mixin grogu {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   margin-top: 300px;
 }
 @mixin images {
@@ -24,7 +28,11 @@
   z-index: 1;
 }
 @mixin arrow {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background-color: white;
+}
+@mixin underline {
+  text-decoration: underline;
+  font-weight: bold;
 }
