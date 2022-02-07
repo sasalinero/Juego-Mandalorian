@@ -40,6 +40,8 @@ const Game = () => {
   const [classMoveGrogu5, setClassMoveGrogu5] = useState("hidden");
   const [classMoveGrogu6, setClassMoveGrogu6] = useState("hidden");
 
+  const donwnload_cookie = "Descargas una caja de galletas azules 🍪";
+
   ///////////////////////////////////////////////////////////FUNCIONES DEL SWITCH PARA ELIMINAR COMIDAS DEL ARMARIO//////////////////////////////////////////////////////
   ////////////////ELIMINAR LAS RANAS///////////////////
   const removeFrog = () => {
@@ -147,8 +149,6 @@ const Game = () => {
         </button>{" "}
       </section>{" "}
       <section className="grid">
-        <img src={recipient} className="recipient2" alt="recipient" />
-        <img src={recipient} className="recipient3" alt="recipient" />
         <img src={recipient} className="recipient1" alt="recipient" />
         <section className="grid_cookies">
           <img
@@ -167,37 +167,42 @@ const Game = () => {
             alt="blue_cookie"
           />
         </section>
-        <img
-          className={`images_egg ${classEgg1}`}
-          src={white_egg}
-          alt="white_egg"
-        />
-        <img
-          className={`images_egg ${classEgg2}`}
-          src={white_egg}
-          alt="white_egg"
-        />
-        <img
-          className={`images_egg ${classEgg3}`}
-          src={white_egg}
-          alt="white_egg"
-        />
-
-        <img
-          className={`images_frog ${classFrog1}`}
-          src={green_frog}
-          alt="green_frog"
-        />
-        <img
-          className={`images_frog ${classFrog2}`}
-          src={green_frog}
-          alt="green_frog"
-        />
-        <img
-          className={`images_frog ${classFrog3}`}
-          src={green_frog}
-          alt="green_frog"
-        />
+        <img src={recipient} className="recipient3" alt="recipient" />
+        <section className="grid_egg">
+          <img
+            className={`egg1 images_egg ${classEgg1}`}
+            src={white_egg}
+            alt="white_egg"
+          />
+          <img
+            className={`egg2 images_egg ${classEgg2}`}
+            src={white_egg}
+            alt="white_egg"
+          />
+          <img
+            className={`egg3 images_egg ${classEgg3}`}
+            src={white_egg}
+            alt="white_egg"
+          />
+        </section>
+        <img src={recipient} className="recipient2" alt="recipient" />
+        <section className="grid_frog">
+          <img
+            className={` frog1 images_frog ${classFrog1}`}
+            src={green_frog}
+            alt="green_frog"
+          />
+          <img
+            className={` frog2 images_frog ${classFrog2}`}
+            src={green_frog}
+            alt="green_frog"
+          />
+          <img
+            className={`frog3 images_frog ${classFrog3}`}
+            src={green_frog}
+            alt="green_frog"
+          />
+        </section>
         <img
           className={`grogu grogu1  ${classMoveGrogu1}`}
           src={grogu_image}

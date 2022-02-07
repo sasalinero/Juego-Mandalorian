@@ -1,5 +1,6 @@
 @import "./core/mixins.scss";
 @import "./core/variables.scss";
+//@import "./core/reset.scss";
 
 .arrow {
   @include arrow;
@@ -119,10 +120,6 @@
 
 .images_cookies {
   @include images;
-  //margin-left: 60px;
-  //margin-top: 200px;
-  grid-column: 8/9;
-  grid-row: 1/2;
 }
 .grid_cookies {
   display: grid;
@@ -145,47 +142,91 @@
   grid-row: 1/2;
   grid-column: 2/3;
 }
-.images_egg {
-  @include images;
-  margin-left: 60px;
-  margin-top: -505px;
+.grid_egg {
+  display: grid;
+  grid-template-rows: auto, auto;
+  grid-template-columns: auto, auto;
   grid-column: 8/9;
   grid-row: 3/4;
+  align-content: center;
+  padding: 40px;
+}
+.egg1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  margin-top: -540px;
+}
+.egg2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  margin-top: -540px;
+}
+.egg3 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  margin-top: -490px;
+}
+.grid_frog {
+  display: grid;
+  grid-template-rows: auto, auto;
+  grid-template-columns: auto, auto;
+  grid-column: 7/8;
+  grid-row: 1/2;
+  align-content: center;
+  padding: 40px;
+  margin-left: 50px;
+}
+.images_egg {
+  @include images;
 }
 .images_frog {
   @include images;
-
-  grid-column: 8/9;
+  //margin-right: 100px;
+  display: flex;
+}
+.frog1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  // margin-right: 100px;
+  margin-top: 200px;
+}
+.frog2 {
+  // margin-top: 100px;
+  grid-row: 2/2;
+  grid-column: 2/3;
+  //margin-right: 100px;
+}
+.frog3 {
+  // margin-top: 100px;
   grid-row: 2/3;
-  margin-top: -160px;
-
-  margin-left: -100px;
+  grid-column: 1/2;
 }
 .recipient1 {
   width: 180px;
   grid-column: 8/9;
   grid-row: 1/2;
   margin-top: 100px;
-  margin-bottom: 0px;
+  //margin-bottom: 0px;
   z-index: 1;
-  //margin-left: 30px;
 }
 .recipient2 {
-  display: flex;
-  justify-content: center;
-  width: 150px;
-  margin-left: -150px;
-  margin-top: -230px;
-  grid-column: 8/9;
-  grid-row: 2/3;
+  width: 180px;
+  grid-column: 7/8;
+  grid-row: 1/2;
+  margin-top: 200px;
+  margin-left: 50px;
   z-index: 1;
 }
 .recipient3 {
-  display: flex;
-  justify-content: center;
-  width: 150px;
+  // display: flex;
+  // justify-content: center;
+  // width: 150px;
   margin-top: -540px;
+  width: 180px;
 
+  // margin-top: 0px;
+  // margin-bottom: 100px;
+  z-index: 1;
   grid-column: 8/9;
   grid-row: 3/4;
   z-index: 1;
@@ -200,4 +241,7 @@
 
 .hidden {
   visibility: hidden;
+}
+.download {
+  color: blueviolet;
 }
