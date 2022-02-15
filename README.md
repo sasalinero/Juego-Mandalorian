@@ -6,6 +6,26 @@
 
 Este proyecto es un juego realizado con React.js. Hay que intentar vaciar el armario de comida antes de que Grogu llegue a él.
 
+### Fichas:
+
+Recipiente de las galletas: ~~~~ 🍪 🍪 🍪
+Recipiente de los huevos de rana:~~~~ 🥚🥚🥚
+Recipiente de las ranas:~~~~ 🐸 🐸 🐸
+
+### Reglas del juego:
+
+Cuando se tire el **Dado** podrá ocurrir:
+
+- Descargar una caja de galletas azules 🍪
+- Descargar un huevo de rana (con mucho cuidado) 🥚
+- Descargar una rana 🐸
+- Grogu se mueve una casilla 👣
+
+twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389
+
+Ganarás el juego si consigues descargar toda la mercancía. Perderás si Grogu llega a la última casilla (el armario).
+twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389 twemoji-1f389twemoji-1f389
+
 ## Construido con 🛠️️
 
 ![React](https://img.shields.io/badge/-React-333333?style=flat&logo=react)&nbsp;
